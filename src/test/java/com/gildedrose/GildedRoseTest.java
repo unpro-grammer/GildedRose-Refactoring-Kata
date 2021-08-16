@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
-	//All items have a name
+    //All items have a name
     @Test
     public void checkItemName() {
         Item[] items = new Item[] { new Item("foo", 0, 0) };
@@ -24,7 +24,7 @@ class GildedRoseTest {
     
     //All items have a SellIn value which denotes the number of days we have to sell the item
     //All items have a Quality value which denotes how valuable the item is
-	//At the end of each day our system lowers both values for every item
+    //At the end of each day our system lowers both values for every item
     @Test
     public void decreaseSellDate() {
         Item[] items = new Item[] { new Item("foo", 0, 0) };
@@ -153,8 +153,8 @@ class GildedRoseTest {
     }
 
     //"Backstage passes", like aged brie, increases in Quality as its SellIn value approaches;
-	//Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but
-	//Quality drops to 0 after the concert
+    //Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but
+    //Quality drops to 0 after the concert
     @Test
     public void checkQualityForBackstagePasses11Daysleft() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10) };
