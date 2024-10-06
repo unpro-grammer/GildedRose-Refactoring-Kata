@@ -257,4 +257,16 @@ class GildedRoseTest {
         assertEquals(1, app.items[0].sellIn);
     }
 
+    @Test
+    public void checkMultipledays(){
+        Item[] items = new Item[] { new Item("Conjured", 2, 16) };
+        GildedRose app = new GildedRose(items);
+
+        for (int i = 0; i < 4; i++) {
+            app.updateQuality();
+        }
+
+        assertEquals(4, app.items[0].quality);
+    }
+
 }
